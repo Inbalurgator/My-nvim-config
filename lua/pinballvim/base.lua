@@ -1,10 +1,5 @@
 local opt = vim.opt
 
-vim.cmd.colorscheme "catppuccin-macchiato"
--- opt.shell = "powershell"
--- opt.shell = "pwsh"
--- opt.shellcmdflag = "/c nu"
-
 opt.cursorline = true --光标提示线
 opt.clipboard:append("unnamedplus")--剪贴板
 

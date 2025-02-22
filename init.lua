@@ -29,4 +29,3 @@ require("pinballvim.mason")
 require("pinballvim.autoTerm")
 
 require("pinballvim.neovide")
--- require("pinballvim.base")s
