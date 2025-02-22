@@ -1,10 +1,12 @@
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    -- theme = 'tokyonight',
-    theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    theme = 'catppuccin',
+    -- theme = 'ayu_mirage',
+    -- component_separators = { left = '', right = ''},
+    component_separators = { left = '', right = ''},
+    -- section_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
     disabled_filetypes = {
       statusline = {},
       winbar = {},

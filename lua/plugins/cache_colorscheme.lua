@@ -25,6 +25,9 @@ return {
       with_file(colorscheme_cache, "r", function(file)
         opts.colorscheme = file:read "*a"
       end)
+      if string.match(opts.colorscheme,"catppuccin_*") then
+        vim.g.catppuccin_enabled = true
+      end
     end,
   },
   {

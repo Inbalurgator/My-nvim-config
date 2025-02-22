@@ -26,17 +26,18 @@ map.set({ "n", "v" }, "<leader>?", ":WhichKey<CR>")
 -- map.set("n","<M-h>",":bprevious<CR>")
 --telescope->yanky
 map.set("n", "<leader>fy", ":Telescope yank_history<CR>")
-
+map.set("n", "<leader>fc", ":Telescope catppuccin<CR>")
 -- neotree
 map.set("n", "<leader><c-t>", ":Neotree dir=")
 --WhichKeyDisplay
 
 require("which-key").add({
-  --haha
   { "p",          desc = "Paste (Put after)" },
   { "P",          desc = "Paste (Put before)" },
   { "<c-p>",      desc = "Yanky Ring previous entry" },
   { "<c-n>",      desc = "Yanky Ring next entry" },
   { "<c-y>",      desc = "Yanky Ring history" },
   { "<leader>fy", desc = "Find Yanky Ring" },
+  { "<leader>fc", desc = "Find Catppuccin Color" },
+  { "<leader><c-t>", desc = "Set Neotree Dir" },
 })

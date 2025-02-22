@@ -1,6 +1,7 @@
 local opt = vim.opt
 
 opt.cursorline = true --光标提示线
+vim.api.nvim_set_hl(0, "CursorLine", { bg = "#323232" })
 opt.clipboard:append("unnamedplus")--剪贴板
 
 opt.termguicolors = true
@@ -11,10 +12,55 @@ opt.signcolumn="yes"
 opt.splitright=true
 opt.splitbelow=true
 
-vim.g.transparency = 0.8 --透明度
-
 require("telescope").load_extension("yank_history")
 require("telescope").load_extension("catppuccin")--telescope->yanky,catppuccin联动
+require('catppuccin').setup({
+  transparent_background = not vim.g.neovide,
+  integrations = {
+    cmp = true,
+    gitsigns = true,
+    neotree = true,
+    telescope = true,
+    which_key = true,
+    -- lualine = true,
+  },
+})
+
+require('notify').setup({
+  background_colour = "#000000",
+  -- background_colour = "Normal",
+  merge_duplicates = true,
+  fps = 60,
+  icons = {
+    DEBUG = "",
+    ERROR = "",
+    INFO = "",
+    TRACE = "✎",
+    WARN = ""
+  },
+  level = 2,
+  minimum_width = 50,
+  render = "compact",
+  stages = "fade_in_slide_out",
+  time_formats = {
+    notification = "%T",
+    notification_history = "%FT%T"
+  },
+  timeout = 5000,
+  top_down = true,
+})
+require('nvim-cursorline').setup {
+  cursorline = {
+    enable = false,
+    timeout = 1000,
+    number = false,
+  },
+  cursorword = {
+    enable = true,
+    min_length = 3,
+    hl = { underline = true },
+  }
+}
 --[[require("noice").setup({
   lsp = {
     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
