@@ -18,12 +18,12 @@ end
 require "lazy_setup"
 require "polish"
 -- local opt = vim.opt
-vim.o.guifont = "0xProto Nerd Font Mono:h12"
+vim.o.guifont = "0xProto Nerd Font Mono:h10.2"
 --my cfg
 require("pinballvim.base")
 require("pinballvim.keyboard")
 require("pinballvim.network")
-require("pinballvim.lualine")
+-- require("pinballvim.lualine")
 require("pinballvim.flash")
 require("pinballvim.mason")
 require("pinballvim.autoTerm")

@@ -40,4 +40,5 @@ require("which-key").add({
   { "<leader>fy", desc = "Find Yanky Ring" },
   { "<leader>fc", desc = "Find Catppuccin Color" },
   { "<leader><c-t>", desc = "Set Neotree Dir" },
+  -- { "<leader><s-H>", desc = "Whichkey Hydra Mode" },
 })
