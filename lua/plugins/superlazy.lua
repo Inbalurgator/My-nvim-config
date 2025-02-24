@@ -1,4 +1,6 @@
-return {
+local config = {}
+
+config["catppuccin"] = {
   "catppuccin/nvim",
   name = "catppuccin",
   priority = 1000,
@@ -19,3 +21,7 @@ return {
   --   require("catppuccin").load()
   -- },
 }
+
+require("catppuccin")
+
+return{}

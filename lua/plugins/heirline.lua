@@ -1,3 +1,6 @@
+if true then
+  return {}
+end -- WARN  disable this to enable
 return {
   "rebelot/heirline.nvim",
   opts = function(_, opts)
