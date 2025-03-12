@@ -1,5 +1,5 @@
--- pick a location to cache colorscheme
-local colorscheme_cache = vim.fs.joinpath(vim.fn.stdpath "state" --[[@as string]], "last_colorscheme")
+if true then return {} end --not ready yet
+local cache = vim.fs.joinpath(vim.fn.stdpath "state" --[[@as string]], "last_colorscheme")
 
 --- Execute function with open file
 ---@param file string path to file to interact with
@@ -18,19 +18,6 @@ end
 
 return {
   {
-    "AstroNvim/astroui",
-    --@param opts AstroUIOpts
-    opts = function(_, opts)
-      -- read colorscheme cache on open
-      with_file(colorscheme_cache, "r", function(file)
-        opts.colorscheme = file:read "*a"
-      end)
-      if string.match(opts.colorscheme,"catppuccin_*") then
-        vim.g.catppuccin_enabled = true
-      end
-    end,
-  },
-  {
     "AstroNvim/astrocore",
     ---@type AstroCoreOpts
     opts = {
@@ -40,11 +27,7 @@ return {
           {
             event = "ColorScheme",
             callback = function(args)
-              if args.match then
-                with_file(colorscheme_cache, "w+", function(file)
-                  file:write(args.match)
-                end)
-              end
+              if args.match then with_file(cache, "w+", function(file) file:write(args.match) end) end
             end,
           },
         },

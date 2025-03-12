@@ -22,5 +22,10 @@ return {
       "typescript",
       -- add more arguments for adding more treesitter parsers
     },
+    install = {
+      command_extra_args = {
+        curl = { "-k" },
+      },
+    },
   },
 }

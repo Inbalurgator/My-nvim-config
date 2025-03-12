@@ -1,5 +1,7 @@
 local config = {}
 
+if true then return {} end
+
 config["catppuccin"] = {
   "catppuccin/nvim",
   name = "catppuccin",
@@ -18,10 +20,34 @@ config["catppuccin"] = {
     },
   },
   -- setup = {
-  --   require("catppuccin").load()
+  --   require.load
   -- },
 }
 
-require("catppuccin")
+config["alpha-nvim"] = { --██
+  "goolord/alpha-nvim",
+  opts = function(_, opts)
+    -- customize the dashboard header
+    opts.section.header.val = {
+      "         ██████████████         ",
+      "       ██              ██           ",
+      "     ██                  ██         ",
+      "   ██                      ██       ",
+      " ██                          ██     ",
+      " ██            █             ██     ",
+      " ██          █████           ██     ",
+      " ██        █████████         ██     ",
+      " ██          █████           ██     ",
+      " ██            █             ██     ",
+      " ██                          ██     ",
+      "   ██                      ██       ",
+      "     ██                  ██         ",
+      "       ██              ██           ",
+      "         ██████████████         ",
+    }
+    return opts
+  end,
+}
+-- require("catppuccin")
 
-return{}
+return config
