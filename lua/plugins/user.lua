@@ -452,6 +452,8 @@ return {
 
   {
     "AstroNvim/astrolsp",
+    priority = 65535,
+    lazy = false,
     ---@type AstroLSPOpts
     opts = {
       formatting = {
@@ -459,6 +461,29 @@ return {
       },
       file_operations = {
         timeout = 90000,
+      },
+      config = {
+        lua_ls = {
+          cmd = {
+            "lua-language-server",
+            "--stdio",
+            "--settings=" .. vim.json.encode {
+              Lua = {
+                runtime = { version = "Lua 5.4" }, -- 使用标准 Lua
+                workspace = { checkThirdParty = false },
+                telemetry = { enable = false },
+              },
+            },
+          },
+          settings = {
+            Lua = {
+              hint = { enable = true, arrayIndex = "Disable" },
+              runtime = {
+                version = "Lua 5.3",
+              },
+            },
+          },
+        },
       },
     },
   },
@@ -877,7 +902,7 @@ return {
     opts = {
       open_mapping = [[<c-t>]],
       direction = "float",
-      shell = "nu",
+      -- shell = "nu",
     },
     keys = {
       { "<c-t>", desc = "ToggleTerm" },

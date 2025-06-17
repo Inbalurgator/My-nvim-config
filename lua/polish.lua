@@ -90,4 +90,4 @@ opt.signcolumn = "yes"
 
 opt.splitright = true
 opt.splitbelow = true
-opt.scrolloff = 999
+opt.scrolloff = 10

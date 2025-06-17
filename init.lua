@@ -27,7 +27,7 @@ require "pinballvim.base"
 -- require("pinballvim.lualine")
 -- require "pinballvim.flash"
 -- require "pinballvim.mason"
-require "pinballvim.autoTerm"
+-- require "pinballvim.autoTerm"
 
 -- require "pinballvim.neovide"
 
