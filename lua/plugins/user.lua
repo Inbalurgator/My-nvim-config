@@ -902,7 +902,7 @@ return {
     opts = {
       open_mapping = [[<c-t>]],
       direction = "float",
-      -- shell = "nu",
+      shell = "nu",
     },
     keys = {
       { "<c-t>", desc = "ToggleTerm" },
